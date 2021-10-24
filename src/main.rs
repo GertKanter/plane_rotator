@@ -79,7 +79,7 @@ fn main() {
         else {
             // Find the normal
             // Normal is just the coefficients
-            let equation = nalgebra::Vector4::new(coefficients[0], coefficients[1], coefficients[2], coefficients[3]);
+            let equation = nalgebra::Vector4::new(coefficients[0], coefficients[1], coefficients[2], 0.0);
             is_rotation_matrix(rotation_from_equation!(equation));
         }
     }
