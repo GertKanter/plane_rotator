@@ -17,7 +17,7 @@ fn rotation_from_equation(normal: nalgebra::Vector4<f32>, goal: nalgebra::Vector
         rotation_matrix = identity;
     }
     else {
-        let v = normal.cross(&goal); // cross(A,B)
+        let v = normal.cross(&goal);
         let s = v.norm();
         let c = goal.dot(&normal);
         let skew = nalgebra::Matrix3::new(0.0, -v[2], v[1],
